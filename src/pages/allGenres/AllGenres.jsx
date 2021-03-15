@@ -8,20 +8,20 @@ import country from '../../assets/genre-country.png';
 import rock from '../../assets/genre-rock.png';
 import bollywood from '../../assets/genre-bollywood.png';
 
-const renderAllSongs = (allsongs) => {
+const renderAllSongs = (allsongs, handlePressFavourite) => {
   console.log('gensres all songs: ', allsongs);
   let i = 0;
   const renderSongs = allsongs.map((song) => {
     i += 1;
     return (
       <React.Fragment key={song.id}>
-        <Song song={song} color={i % 2 === 0} />
+        <Song song={song} color={i % 2 === 0} handlePressFavourite={handlePressFavourite} />
       </React.Fragment>
     );
   });
   return renderSongs;
 };
-const renderAllGenres = (groupedGenres) => (
+const renderAllGenres = (groupedGenres, handlePressFavourite) => (
   Object.keys(groupedGenres).map((genre) => {
     let genreImage = pop;
     if (genre === 'Country') {
@@ -40,20 +40,20 @@ const renderAllGenres = (groupedGenres) => (
           <Button text={genre} className="genre-button" onClick={() => {}} />
         </div>
         <div className="all-genre-songs">
-          {renderAllSongs(groupedGenres[genre])}
+          {renderAllSongs(groupedGenres[genre], handlePressFavourite)}
         </div>
       </div>
     );
   })
 );
 
-const AllGenres = ({ groupedGenres }) => {
+const AllGenres = ({ groupedGenres, handlePressFavourite }) => {
   console.log('inside all genres', groupedGenres);
   return (
     <>
       <div className="all-songs-container">
         <h1>genres</h1>
-        {renderAllGenres(groupedGenres)}
+        {renderAllGenres(groupedGenres, handlePressFavourite)}
       </div>
     </>
   );
@@ -61,6 +61,7 @@ const AllGenres = ({ groupedGenres }) => {
 
 AllGenres.propTypes = {
   groupedGenres: PropTypes.objectOf(PropTypes.shape).isRequired,
+  handlePressFavourite: PropTypes.func.isRequired,
 
 };
 export default AllGenres;

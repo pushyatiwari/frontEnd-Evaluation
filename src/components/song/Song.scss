@@ -35,3 +35,16 @@
     margin-top: 1rem;
     justify-content: center;
 }
+.fav-button{
+    height: 3rem;
+    width: 3rem;
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+}
+.fav-count { 
+    position: absolute; 
+    top: 0.1rem;
+    left: 1.1rem; 
+    color: white;
+} 

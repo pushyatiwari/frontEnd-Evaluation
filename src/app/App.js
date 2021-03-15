@@ -40,6 +40,19 @@ const App = () => {
     setSongs(songsWithUpdatesFields);
   }, []);
 
+  const handlePressFavourite = async (isLike, id) => {
+    const bodyData = {
+      like: !isLike,
+    };
+    const getSongsFromApi = await axios.patch(`/records/${id}/likes`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(bodyData),
+      });
+    return getSongsFromApi;
+  };
   const groupByGenres = () => {
     // const newGroupedGenres = {};
     // console.log('songs', songs);
@@ -65,10 +78,17 @@ const App = () => {
           <Home />
         </Route>
         <Route path="/allsongs" exact>
-          <AllSongs allsongs={songs} groupByGenres={groupByGenres} />
+          <AllSongs
+            allsongs={songs}
+            groupByGenres={groupByGenres}
+            handlePressFavourite={handlePressFavourite}
+          />
         </Route>
         <Route path="/allgenres" exact>
-          <AllGenres groupedGenres={groupedGenres} />
+          <AllGenres
+            groupedGenres={groupedGenres}
+            handlePressFavourite={handlePressFavourite}
+          />
         </Route>
       </Switch>
     </>

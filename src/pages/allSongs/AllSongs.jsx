@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import Song from '../../components/song/Song';
 import './AllSongs.scss';
 
-const renderAllSongs = (allsongs) => {
+const renderAllSongs = (allsongs, handlePressFavourite) => {
   let i = 0;
   const renderSongs = allsongs.map((song) => {
     i += 1;
     return (
       <React.Fragment key={song.id}>
-        <Song song={song} color={i % 2 === 0} />
+        <Song song={song} color={i % 2 === 0} handlePressFavourite={handlePressFavourite} />
       </React.Fragment>
     );
   });
@@ -18,9 +18,9 @@ const renderAllSongs = (allsongs) => {
 };
 
 const toggleIcon = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAMFBMVEX///8AAACVlZXf39/ExMQLCwvk5OSlpaWZmZn29vbe3t7v7++fn5+ioqKRkZHOzs6jB9wbAAAAvklEQVR4nO3dOw6DMABEQUhCQr7c/7ap3SEZvBjNnMCvc7GyhwEAAAAAAAAAAAAA4DzmSw/misKxDxWFU/rsq0wKFR6eQoXHV1OYPvtKFYXXPlQUAgAAAAAAAAAAAC3dkp4tCqOr0XuLwuhGWKFChQoVdlKYDGxTeP47DQAAAAAAAAAAANDS9s82v97pptIOq9FPuqm0w0b4kW4qKVSoME9h/4XbB47fdFNp+z+7fku6CQAAAAAAAAAAAADg2P7Dmhc7T2FttAAAAABJRU5ErkJggg==';
-const AllSongs = ({ allsongs, groupByGenres }) => {
+const AllSongs = ({ allsongs, groupByGenres, handlePressFavourite }) => {
   console.log('allsongs: ', allsongs);
-  const renderSongs = renderAllSongs(allsongs);
+  const renderSongs = renderAllSongs(allsongs, handlePressFavourite);
   if (allsongs.length !== 0) {
     return (
       <div className="all-songs-container">
@@ -46,6 +46,7 @@ const AllSongs = ({ allsongs, groupByGenres }) => {
 AllSongs.propTypes = {
   allsongs: PropTypes.arrayOf(PropTypes.shape).isRequired,
   groupByGenres: PropTypes.func.isRequired,
+  handlePressFavourite: PropTypes.func.isRequired,
 
 };
 export default AllSongs;
