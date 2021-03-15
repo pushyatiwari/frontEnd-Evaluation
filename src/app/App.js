@@ -18,7 +18,7 @@ const App = () => {
           Authorization: `Bearer ${token}`,
         },
       });
-    console.log(`mock once: ${getSongsFromApi}`);
+    console.log(`mock once: ${JSON.stringify(getSongsFromApi)}`);
     const getSongs = getSongsFromApi.data.data.map((song) => {
       const getCount = axios.get(`/records/${song.id}/likes`,
         {
@@ -29,6 +29,7 @@ const App = () => {
       return getCount;
     });
     const returnedSongsWithLikes = await Promise.all(getSongs);
+    console.log('mock twice: ', returnedSongsWithLikes);
     const songsWithUpdatesFields = [];
     for (let i = 0; i < getSongsFromApi.data.data.length; i += 1) {
       const newSongObject = {
