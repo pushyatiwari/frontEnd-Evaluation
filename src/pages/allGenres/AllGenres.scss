@@ -20,3 +20,20 @@ h1{
 .genre-title{
     display: flex;
 }
+
+@media only screen and (max-width: 360px) {
+    .all-genre-songs{
+        flex-flow: column wrap;
+        font-family: $theme-font;
+        flex-direction: column;
+        height: 10rem;
+        width: 10rem;
+    }
+    .genre-container{
+        flex-flow: column wrap;
+        font-family: $theme-font;
+        flex-direction: column;
+        height: 10rem;
+        width: 10rem;
+    }
+  }
