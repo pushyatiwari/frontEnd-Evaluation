@@ -5,11 +5,10 @@ import axios from 'axios';
 import Home from '../pages/home/Home';
 import AllSongs from '../pages/allSongs/AllSongs';
 import NavBar from '../components/navbar/Navbar';
+import { token } from '../constants';
 
 const App = () => {
   const [songs, setSongs] = useState([]);
-  const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5OWVkZDIyMi0xYzRjLTQ0ZTEtYTlmYi0wZjAwMTllYTk3MmYiLCJuYW1lIjoiUHVzaHlhIiwicm9sZSI6MCwic3ViamVjdCI6IlRlY2ggVW5pdiAyMDIxIiwiZWFzdGVyX2VnZyI6Ikdvb2QgbHVjayEiLCJhdWQiOiJtdXNpY3JlY29yZHMudGVjaHVuaXYuY29tIiwibmJmIjoxNjE1Nzg0NDk0LCJleHAiOjE2MTgzNzY0OTQsImlhdCI6MTYxNTc4NDQ5NCwiaXNzIjoiTXVzaWMgUmVjb3JkcyJ9.GIjkdAbQaZH0socKaGridkVg6rPxmjihnELQ92SVKEI';
-
   useEffect(async () => {
     const getSongsFromApi = await axios.get('/records',
       {
