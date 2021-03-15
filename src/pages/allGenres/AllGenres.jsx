@@ -34,10 +34,10 @@ const renderAllGenres = (groupedGenres) => (
       genreImage = bollywood;
     }
     return (
-      <div className="genre-container">
+      <div className="genre-container" key={genre}>
         <div className="genre-title">
           <img src={genreImage} alt="genre" />
-          <Button text={genre} className="genre-button" />
+          <Button text={genre} className="genre-button" onClick={() => {}} />
         </div>
         <div className="all-genre-songs">
           {renderAllSongs(groupedGenres[genre])}
