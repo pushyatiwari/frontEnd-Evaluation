@@ -1,57 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home renders  react link 1`] = `
+exports[`Button renders  button 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="home-container"
+      <button
+        class="button"
+        type="button"
       >
-        <p>
-          :((
-        </p>
-        <p>
-          seems a bit empty in here...
-        </p>
-        <a
-          href="/allsongs"
-        >
-          <button
-            class="button"
-            type="button"
-          >
-            <b>
-              sync
-            </b>
-          </button>
-        </a>
-      </div>
+        <b />
+      </button>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="home-container"
+    <button
+      class="button"
+      type="button"
     >
-      <p>
-        :((
-      </p>
-      <p>
-        seems a bit empty in here...
-      </p>
-      <a
-        href="/allsongs"
-      >
-        <button
-          class="button"
-          type="button"
-        >
-          <b>
-            sync
-          </b>
-        </button>
-      </a>
-    </div>
+      <b />
+    </button>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

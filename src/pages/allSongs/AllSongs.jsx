@@ -4,11 +4,15 @@ import Song from '../../components/song/Song';
 import './AllSongs.scss';
 
 const renderAllSongs = (allsongs) => {
-  const renderSongs = allsongs.map((song) => (
-    <React.Fragment key={song.id}>
-      <Song song={song} />
-    </React.Fragment>
-  ));
+  let i = 0;
+  const renderSongs = allsongs.map((song) => {
+    i += 1;
+    return (
+      <React.Fragment key={song.id}>
+        <Song song={song} color={i % 2 === 0} />
+      </React.Fragment>
+    );
+  });
   return renderSongs;
 };
 
@@ -17,8 +21,11 @@ const AllSongs = ({ allsongs }) => {
   const renderSongs = renderAllSongs(allsongs);
   if (allsongs.length !== 0) {
     return (
-      <div className="songs">
-        {renderSongs}
+      <div className="all-songs-container">
+        <p className="all-songs-text"><b>all songs</b></p>
+        <div className="songs">
+          {renderSongs}
+        </div>
       </div>
     );
   }

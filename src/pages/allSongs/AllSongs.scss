@@ -1,8 +1,26 @@
+@import '../../style/index.scss';
+
 .songs{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     height: 25rem;
-    margin-top: 5rem;
     width: 75rem;
+    font-family: $theme-font;
+}
+.all-songs-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-family: $theme-font;
+}
+.all-songs-container{
+    background-color: #F5F5F5;
+    width: 70rem;
+    margin-top: 1rem;
+    margin-left: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

@@ -1,10 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home renders  react link 1`] = `
+exports[`App should match snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
+      <header
+        class="nav-header"
+      >
+        <p>
+          My
+           
+          <b>
+            Record
+          </b>
+           
+          Shelf
+        </p>
+      </header>
       <div
         class="home-container"
       >
@@ -30,6 +43,19 @@ Object {
     </div>
   </body>,
   "container": <div>
+    <header
+      class="nav-header"
+    >
+      <p>
+        My
+         
+        <b>
+          Record
+        </b>
+         
+        Shelf
+      </p>
+    </header>
     <div
       class="home-container"
     >

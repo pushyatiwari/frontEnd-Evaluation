@@ -17,6 +17,7 @@ const App = () => {
           Authorization: `Bearer ${token}`,
         },
       });
+    console.log(`mock once: ${getSongsFromApi}`);
     const getSongs = getSongsFromApi.data.data.map((song) => {
       const getCount = axios.get(`/records/${song.id}/likes`,
         {

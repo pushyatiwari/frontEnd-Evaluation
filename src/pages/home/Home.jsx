@@ -9,7 +9,7 @@ const Home = () => (
     <p>:((</p>
     <p>seems a bit empty in here...</p>
     <Link to="/allsongs">
-      <Button type="button" text="sync" onClick={() => {}}><b>sync</b></Button>
+      <Button data-testid="sync-button" type="button" text="sync" onClick={() => {}}><b>sync</b></Button>
     </Link>
   </div>
 );
