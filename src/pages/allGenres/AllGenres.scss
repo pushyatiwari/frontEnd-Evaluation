@@ -1,0 +1,22 @@
+@import '../../style/index.scss';
+
+.all-genre-songs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 15rem;
+    width: 75rem;
+    font-family: $theme-font;
+}
+.genre-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30rem;
+}
+
+h1{
+    font-family: $theme-font;
+}
+.genre-title{
+    display: flex;
+}

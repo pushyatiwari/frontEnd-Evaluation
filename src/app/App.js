@@ -6,9 +6,11 @@ import Home from '../pages/home/Home';
 import AllSongs from '../pages/allSongs/AllSongs';
 import NavBar from '../components/navbar/Navbar';
 import { token } from '../constants';
+import AllGenres from '../pages/allGenres/AllGenres';
 
 const App = () => {
   const [songs, setSongs] = useState([]);
+  const [groupedGenres, setGroupedGenres] = useState({});
   useEffect(async () => {
     const getSongsFromApi = await axios.get('/records',
       {
@@ -38,6 +40,23 @@ const App = () => {
     setSongs(songsWithUpdatesFields);
   }, []);
 
+  const groupByGenres = () => {
+    // const newGroupedGenres = {};
+    // console.log('songs', songs);
+    const newGroupedGenres = songs.reduce((accumulator, song) => {
+      if (accumulator[song.genre.name] === undefined) {
+        accumulator[song.genre.name] = [];
+        accumulator[song.genre.name].push(song);
+      } else {
+        const addSongs = accumulator[song.genre.name].push(song);
+        return { ...accumulator, ...addSongs };
+      }
+      console.log('acc: ', accumulator);
+      return accumulator;
+    }, {});
+    console.log('grouped generse:  ', newGroupedGenres);
+    setGroupedGenres(newGroupedGenres);
+  };
   return (
     <>
       <NavBar />
@@ -46,7 +65,10 @@ const App = () => {
           <Home />
         </Route>
         <Route path="/allsongs" exact>
-          <AllSongs allsongs={songs} />
+          <AllSongs allsongs={songs} groupByGenres={groupByGenres} />
+        </Route>
+        <Route path="/allgenres" exact>
+          <AllGenres groupedGenres={groupedGenres} />
         </Route>
       </Switch>
     </>
