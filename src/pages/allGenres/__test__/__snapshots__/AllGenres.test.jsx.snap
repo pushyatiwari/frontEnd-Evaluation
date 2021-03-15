@@ -58,11 +58,19 @@ Object {
                     Maroon 5
                   </p>
                 </div>
-                <img
-                  alt="fav"
-                  class="fav"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYlLHjRrXnSZtMYz4tylnrrAfSTY5A5EmyRQ&usqp=CAU"
-                />
+                <button
+                  class="fav-button"
+                  type="button"
+                >
+                  <p
+                    class="fav-count"
+                  />
+                  <img
+                    alt="fav"
+                    class="fav"
+                    src="https://www.materialui.co/materialIcons/action/favorite_grey_192x192.png"
+                  />
+                </button>
               </div>
             </div>
           </div>
@@ -124,11 +132,19 @@ Object {
                   Maroon 5
                 </p>
               </div>
-              <img
-                alt="fav"
-                class="fav"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYlLHjRrXnSZtMYz4tylnrrAfSTY5A5EmyRQ&usqp=CAU"
-              />
+              <button
+                class="fav-button"
+                type="button"
+              >
+                <p
+                  class="fav-count"
+                />
+                <img
+                  alt="fav"
+                  class="fav"
+                  src="https://www.materialui.co/materialIcons/action/favorite_grey_192x192.png"
+                />
+              </button>
             </div>
           </div>
         </div>

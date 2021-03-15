@@ -2,9 +2,14 @@ import {
   render,
 } from '@testing-library/react';
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import AllSongs from '../AllSongs';
 
 describe(AllSongs.name, () => {
+  const mockFunction = {
+    groupByGenres: jest.fn(),
+    handlePressFavourite: jest.fn(),
+  };
   const mockSongs = [
     {
       id: '07075cdb-9e5c-41ec-8c09-9a1322dd92d8',
@@ -15,7 +20,15 @@ describe(AllSongs.name, () => {
     },
   ];
   test('renders  react link', () => {
-    const app = render(<AllSongs allsongs={mockSongs} />);
+    const app = render(
+      <BrowserRouter>
+        <AllSongs
+          allsongs={mockSongs}
+          groupByGenres={mockFunction.groupByGenres}
+          handlePressFavourite={mockFunction.handlePressFavourite}
+        />
+      </BrowserRouter>,
+    );
     expect(app).toMatchSnapshot();
   });
 });

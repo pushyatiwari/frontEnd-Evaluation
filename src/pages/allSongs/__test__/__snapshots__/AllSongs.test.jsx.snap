@@ -14,6 +14,20 @@ Object {
           <b>
             all songs
           </b>
+          <a
+            href="/allgenres"
+          >
+            <button
+              class="toggleIconButton"
+              type="button"
+            >
+              <img
+                alt="toggle"
+                class="toggleIcon"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAMFBMVEX///8AAACVlZXf39/ExMQLCwvk5OSlpaWZmZn29vbe3t7v7++fn5+ioqKRkZHOzs6jB9wbAAAAvklEQVR4nO3dOw6DMABEQUhCQr7c/7ap3SEZvBjNnMCvc7GyhwEAAAAAAAAAAAAA4DzmSw/misKxDxWFU/rsq0wKFR6eQoXHV1OYPvtKFYXXPlQUAgAAAAAAAAAAAC3dkp4tCqOr0XuLwuhGWKFChQoVdlKYDGxTeP47DQAAAAAAAAAAANDS9s82v97pptIOq9FPuqm0w0b4kW4qKVSoME9h/4XbB47fdFNp+z+7fku6CQAAAAAAAAAAAADg2P7Dmhc7T2FttAAAAABJRU5ErkJggg=="
+              />
+            </button>
+          </a>
         </p>
         <div
           class="songs"
@@ -43,11 +57,19 @@ Object {
                   Neha Kakkar
                 </p>
               </div>
-              <img
-                alt="fav"
-                class="fav"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYlLHjRrXnSZtMYz4tylnrrAfSTY5A5EmyRQ&usqp=CAU"
-              />
+              <button
+                class="fav-button"
+                type="button"
+              >
+                <p
+                  class="fav-count"
+                />
+                <img
+                  alt="fav"
+                  class="fav"
+                  src="https://www.materialui.co/materialIcons/action/favorite_grey_192x192.png"
+                />
+              </button>
             </div>
           </div>
         </div>
@@ -64,6 +86,20 @@ Object {
         <b>
           all songs
         </b>
+        <a
+          href="/allgenres"
+        >
+          <button
+            class="toggleIconButton"
+            type="button"
+          >
+            <img
+              alt="toggle"
+              class="toggleIcon"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAMFBMVEX///8AAACVlZXf39/ExMQLCwvk5OSlpaWZmZn29vbe3t7v7++fn5+ioqKRkZHOzs6jB9wbAAAAvklEQVR4nO3dOw6DMABEQUhCQr7c/7ap3SEZvBjNnMCvc7GyhwEAAAAAAAAAAAAA4DzmSw/misKxDxWFU/rsq0wKFR6eQoXHV1OYPvtKFYXXPlQUAgAAAAAAAAAAAC3dkp4tCqOr0XuLwuhGWKFChQoVdlKYDGxTeP47DQAAAAAAAAAAANDS9s82v97pptIOq9FPuqm0w0b4kW4qKVSoME9h/4XbB47fdFNp+z+7fku6CQAAAAAAAAAAAADg2P7Dmhc7T2FttAAAAABJRU5ErkJggg=="
+            />
+          </button>
+        </a>
       </p>
       <div
         class="songs"
@@ -93,11 +129,19 @@ Object {
                 Neha Kakkar
               </p>
             </div>
-            <img
-              alt="fav"
-              class="fav"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYlLHjRrXnSZtMYz4tylnrrAfSTY5A5EmyRQ&usqp=CAU"
-            />
+            <button
+              class="fav-button"
+              type="button"
+            >
+              <p
+                class="fav-count"
+              />
+              <img
+                alt="fav"
+                class="fav"
+                src="https://www.materialui.co/materialIcons/action/favorite_grey_192x192.png"
+              />
+            </button>
           </div>
         </div>
       </div>
