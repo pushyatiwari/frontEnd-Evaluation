@@ -32,3 +32,17 @@
 .toggleIconButton{
     background-color: transparent;
 }
+
+@media only screen and (max-width: 360px) {
+    .songs{
+        flex-flow: column wrap;
+        font-family: $theme-font;
+        height: 25rem;
+        width: 15rem;
+    }
+    .all-songs-container{
+        display: flex;
+        flex-flow: column wrap
+
+    }
+  }
