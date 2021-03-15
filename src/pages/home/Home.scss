@@ -1,0 +1,10 @@
+@import '../../style/index.scss';
+
+.home-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    font-size: large;
+    font-family:$theme-font;
+}

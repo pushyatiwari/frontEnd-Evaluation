@@ -1,0 +1,10 @@
+@import '../../style/index.scss';
+
+.nav-header{
+    background-color: $navbar-background;
+    margin: 0rem;
+    height: 2rem;
+    padding: 0rem;
+    font-family:$theme-font;
+    color: white;
+}

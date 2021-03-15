@@ -1,0 +1,16 @@
+@import '../../style/index.scss';
+
+.button {
+    font-size: 1rem;
+    background-color:$button-background;
+    color: white;
+    font-weight: 400;
+    border-radius: 5rem;
+    padding: 0.5rem;
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(189, 189, 189);
+  }

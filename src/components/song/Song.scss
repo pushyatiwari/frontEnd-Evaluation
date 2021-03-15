@@ -1,0 +1,30 @@
+.song-container{
+    height: 17rem;
+    width: 17rem;
+    background-color: #ABABAB;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem;
+    border-radius: 2rem;
+
+}
+.album-art{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 10rem;
+}
+.fav{
+    height: 2rem;
+    width: 2rem;
+}
+.song-card-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin: 0rem 1rem 0rem 1rem;
+}
+.album-art-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
